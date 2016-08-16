@@ -1,0 +1,7 @@
+D:\AppDatas\VS2013\Projects\ArcMapShowGridAddin\ArcMapShowGridAddin\bin\Debug\ArcMapShowGridAddin.dll
+D:\AppDatas\VS2013\Projects\ArcMapShowGridAddin\ArcMapShowGridAddin\bin\Debug\ArcMapShowGridAddin.pdb
+D:\AppDatas\VS2013\Projects\ArcMapShowGridAddin\ArcMapShowGridAddin\obj\Debug\ArcMapShowGridAddin.csprojResolveAssemblyReference.cache
+D:\AppDatas\VS2013\Projects\ArcMapShowGridAddin\ArcMapShowGridAddin\obj\Debug\ArcMapShowGridAddin.dll
+D:\AppDatas\VS2013\Projects\ArcMapShowGridAddin\ArcMapShowGridAddin\obj\Debug\ArcMapShowGridAddin.pdb
+D:\AppDatas\VS2013\Projects\ArcMapShowGridAddin\ArcMapShowGridAddin\obj\Debug\ArcMapShowGridAddin.csproj.ResolveComReference.cache
+D:\AppDatas\VS2013\Projects\ArcMapShowGridAddin\ArcMapShowGridAddin\bin\Debug\ArcMapShowGridAddin.esriAddIn
