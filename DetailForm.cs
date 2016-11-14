@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using ESRI.ArcGIS.Carto;
 
 namespace ArcMapShowGridAddin
 {
+    delegate void ClearLinesDelegate();
+
     public partial class DetailForm : Form
     {
+        
+
         double x_source;
         double y_source;
+        internal ClearLinesDelegate clearLinesHandler;
 
         public DetailForm()
         {
@@ -38,17 +44,19 @@ namespace ArcMapShowGridAddin
         public void AddPoints(double x, double y)
         {
             x_source = Math.Round(x,3);
-            y_source = Math.Round(y,3);
+            y_source = Math.Round(y,3);        
             this.lblXSource.Text = x_source.ToString();
             this.lblYSource.Text = y_source.ToString();
         }
+
+        
 
         bool Convert2Decimal(string degree, string minute, string second,out double result)
         {
             double d,m,s;
             if(double.TryParse(degree,out d) && double.TryParse(minute,out m) && double.TryParse(second,out s))
             {
-                result = Math.Round((d + m / 60 + s / 60), 3) ;
+                result = Math.Round((d + m / 60 + s / 3600), 3) ;
                 return true;
             }else
             {
@@ -60,6 +68,7 @@ namespace ArcMapShowGridAddin
         private void button3_Click(object sender, EventArgs e)
         {
             gvPoints.Rows.Clear();
+            clearLinesHandler();
         }
 
         private void button1_Click(object sender, EventArgs e)

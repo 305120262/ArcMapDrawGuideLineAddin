@@ -7,3 +7,12 @@ D:\AppDatas\VS2013\Projects\ArcMapShowGridAddin\ArcMapShowGridAddin\obj\Release\
 D:\AppDatas\VS2013\Projects\ArcMapShowGridAddin\ArcMapShowGridAddin\obj\Release\ArcMapShowGridAddin.DetailForm.resources
 D:\AppDatas\VS2013\Projects\ArcMapShowGridAddin\ArcMapShowGridAddin\obj\Release\ArcMapShowGridAddin.csproj.GenerateResource.Cache
 D:\AppDatas\VS2013\Projects\ArcMapShowGridAddin\ArcMapShowGridAddin\bin\Release\ArcMapShowGridAddin.esriAddIn
+D:\AppDatas\VS2013\Projects\ArcMapDrawGridAddin\ArcMapShowGridAddin\bin\Release\ArcMapShowGridAddin.dll
+D:\AppDatas\VS2013\Projects\ArcMapDrawGridAddin\ArcMapShowGridAddin\bin\Release\ArcMapShowGridAddin.pdb
+D:\AppDatas\VS2013\Projects\ArcMapDrawGridAddin\ArcMapShowGridAddin\obj\Release\ArcMapShowGridAddin.csprojResolveAssemblyReference.cache
+D:\AppDatas\VS2013\Projects\ArcMapDrawGridAddin\ArcMapShowGridAddin\obj\Release\ArcMapShowGridAddin.csproj.ResolveComReference.cache
+D:\AppDatas\VS2013\Projects\ArcMapDrawGridAddin\ArcMapShowGridAddin\obj\Release\ArcMapShowGridAddin.DetailForm.resources
+D:\AppDatas\VS2013\Projects\ArcMapDrawGridAddin\ArcMapShowGridAddin\obj\Release\ArcMapShowGridAddin.csproj.GenerateResource.Cache
+D:\AppDatas\VS2013\Projects\ArcMapDrawGridAddin\ArcMapShowGridAddin\obj\Release\ArcMapShowGridAddin.dll
+D:\AppDatas\VS2013\Projects\ArcMapDrawGridAddin\ArcMapShowGridAddin\obj\Release\ArcMapShowGridAddin.pdb
+D:\AppDatas\VS2013\Projects\ArcMapDrawGridAddin\ArcMapShowGridAddin\bin\Release\ArcMapShowGridAddin.esriAddIn

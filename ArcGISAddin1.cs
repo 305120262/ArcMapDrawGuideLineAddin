@@ -9,6 +9,8 @@ using System.Windows.Forms;
 
 namespace ArcMapShowGridAddin
 {
+
+
     public class ShowGridAddin : ESRI.ArcGIS.Desktop.AddIns.Tool
     {
         int mouseX = 0;
@@ -19,6 +21,7 @@ namespace ArcMapShowGridAddin
         IPolyline line_h;
         ISymbol symbol;
         DetailForm frm;
+        List<IElement> addedLines = new List<IElement>();
 
         public ShowGridAddin()
         {
@@ -27,8 +30,8 @@ namespace ArcMapShowGridAddin
 
         protected override void OnActivate()
         {
-            if (frm == null) 
-            { frm = new DetailForm(); }
+            if (frm == null)
+            { frm = new DetailForm(); frm.clearLinesHandler = new ClearLinesDelegate(ClearLinesMethod); }
             frm.Show(); 
            
             IRgbColor rgbColor = new RgbColorClass();
@@ -44,6 +47,17 @@ namespace ArcMapShowGridAddin
             avevents.AfterDraw += avevents_AfterDraw;
         }
 
+        private void ClearLinesMethod()
+        {
+            IGraphicsContainer container = mapDoc.ActiveView as IGraphicsContainer;
+            for (int i = addedLines.Count - 1; i >= 0; i--)
+            {
+                IElement ele = addedLines[i];
+                container.DeleteElement(ele);
+                addedLines.Remove(ele);
+            }
+        }
+
         protected override bool OnDeactivate()
         {
             frm.Hide();
@@ -56,7 +70,7 @@ namespace ArcMapShowGridAddin
         protected override void OnMouseDown(ESRI.ArcGIS.Desktop.AddIns.Tool.MouseEventArgs arg)
         {
             IPoint loc = mapDoc.ActiveView.ScreenDisplay.DisplayTransformation.ToMapPoint(mouseX, mouseY);
-            frm.AddPoints(loc.X,loc.Y);
+            
             IGraphicsContainer container = mapDoc.ActiveView as IGraphicsContainer;
             ILineElement lineElement_v = new LineElementClass();
             lineElement_v.Symbol = symbol as ILineSymbol;
@@ -73,6 +87,11 @@ namespace ArcMapShowGridAddin
             container.AddElement(lineElement_h_ele, 0);
 
             mapDoc.ActiveView.PartialRefresh(esriViewDrawPhase.esriViewGraphics, null, null);
+
+            addedLines.Add(lineElement_v_ele);
+            addedLines.Add(lineElement_h_ele);
+
+            frm.AddPoints(loc.X, loc.Y);
 
         }
 
